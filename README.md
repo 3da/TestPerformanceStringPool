@@ -1,6 +1,10 @@
 # TestPerformanceStringPool
 Performance comparsion of Dictionary vs ConcurrentDictionary vs Intern vs StringPool
 
+Сравнение производительности разных вариантов, когда нужно сделать так, чтобы каждая строка хранилась в памяти в единственном экземпляре.
+
+Судя по всему, для небольших строк побеждает ConcurrentDictionary, а для больших строк — StringPool.
+
 ``` ini
 
 BenchmarkDotNet=v0.13.5, OS=Windows 10 (10.0.19045.2604/22H2/2022Update)
